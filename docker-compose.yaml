@@ -1,14 +1,14 @@
 version: '3'
 services:
   app:
-    build: /home/anjana/Docker-web-app/Docker-app
+    build: Docker-app/
     container_name: devopsapp
     ports: 
       - "8081:8080"
     depends_on:
       - db
   db: 
-    build: /home/anjana/Docker-web-app/Docker-db
+    build: Docker-db/
     container_name: devopsdb
     ports:
       - "8082:3306"
