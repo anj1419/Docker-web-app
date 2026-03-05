@@ -1,13 +1,16 @@
 version: '3'
 services:
   app:
-    build: Docker-app/
+    build:
+      context: .
+      dockerfile: Docker-app/Dockerfile
     container_name: devopsapp
-    ports: 
+    ports:
       - "8081:8080"
     depends_on:
       - db
-  db: 
+
+  db:
     build: Docker-db/
     container_name: devopsdb
     ports:
